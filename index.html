@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LAZZO · Encastre, ingenio y velocidad</title>
+  <meta name="description" content="LAZZO es un juego de mesa lúdico-terapéutico para jardines de infantes: estimula la psicomotricidad fina y el pensamiento estratégico. Edición Mes de las Infancias.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Chillax (Fontshare). Para presentar sin internet, ver README: fonts/Chillax-*.woff2 -->
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=chillax@400,500,600,700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="skip" href="#proyecto">Saltar al contenido</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <a class="nav__logo" href="#top" aria-label="LAZZO, volver al inicio">
+      <svg viewBox="0 0 782 210" aria-hidden="true"><use href="#logo"/></svg>
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span></span><span></span>
+    </button>
+    <nav class="nav__menu" id="menu" aria-label="Secciones">
+      <a href="#proyecto">Proyecto</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#detalles">Detalles</a>
+      <a href="#en-uso">En uso</a>
+      <a href="#manual">Manual</a>
+      <a class="btn btn--sm btn--negro" href="#pedido">Pedir LAZZO</a>
+    </nav>
+  </header>
+
+  <!-- Logo (construido con piezas, como en la tapa) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="logo">
+        <g class="logo__l" data-letter="l">
+          <path d="M27.9 27.9V177.5" stroke="#00B45B" stroke-width="55.8" stroke-linecap="round" fill="none"/>
+          <circle cx="27.9" cy="27.9" r="27.9" fill="#00984D"/><circle cx="27.9" cy="177.5" r="27.9" fill="#00984D"/>
+          <circle cx="27.9" cy="27.9" r="6.7" fill="#fff"/><circle cx="27.9" cy="177.5" r="6.7" fill="#fff"/>
+        </g>
+        <g class="logo__l" data-letter="a">
+          <circle cx="154" cy="121" r="56" stroke="#FF533B" stroke-width="55.8" fill="none"/>
+          <path d="M236.5 63V179" stroke="#FF533B" stroke-width="55.8" stroke-linecap="round" fill="none"/>
+          <circle cx="98" cy="121" r="27.9" fill="#EB1013"/><circle cx="236.5" cy="63" r="27.9" fill="#EB1013"/><circle cx="236.5" cy="179" r="27.9" fill="#EB1013"/>
+          <circle cx="98" cy="121" r="6.7" fill="#fff"/><circle cx="236.5" cy="63" r="6.7" fill="#fff"/><circle cx="236.5" cy="179" r="6.7" fill="#fff"/>
+        </g>
+        <g class="logo__l" data-letter="z">
+          <path d="M308 66H411L308 178H411" stroke="#0290E0" stroke-width="55.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="308" cy="66" r="27.9" fill="#0174B5"/><circle cx="411" cy="66" r="27.9" fill="#0174B5"/><circle cx="308" cy="178" r="27.9" fill="#0174B5"/><circle cx="411" cy="178" r="27.9" fill="#0174B5"/>
+          <circle cx="308" cy="66" r="6.7" fill="#fff"/><circle cx="411" cy="66" r="6.7" fill="#fff"/><circle cx="308" cy="178" r="6.7" fill="#fff"/><circle cx="411" cy="178" r="6.7" fill="#fff"/>
+        </g>
+        <g class="logo__l" data-letter="z">
+          <path d="M475 66H578L475 178H578" stroke="#00B45B" stroke-width="55.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="475" cy="66" r="27.9" fill="#00984D"/><circle cx="578" cy="66" r="27.9" fill="#00984D"/><circle cx="475" cy="178" r="27.9" fill="#00984D"/><circle cx="578" cy="178" r="27.9" fill="#00984D"/>
+          <circle cx="475" cy="66" r="6.7" fill="#fff"/><circle cx="578" cy="66" r="6.7" fill="#fff"/><circle cx="475" cy="178" r="6.7" fill="#fff"/><circle cx="578" cy="178" r="6.7" fill="#fff"/>
+        </g>
+        <g class="logo__l" data-letter="o">
+          <circle cx="694.5" cy="122" r="58.5" stroke="#FFCB04" stroke-width="55.8" fill="none"/>
+          <circle cx="694.5" cy="63.5" r="27.9" fill="#FEA100"/><circle cx="694.5" cy="180.5" r="27.9" fill="#FEA100"/>
+          <circle cx="694.5" cy="63.5" r="6.7" fill="#fff"/><circle cx="694.5" cy="180.5" r="6.7" fill="#fff"/>
+        </g>
+      </g>
+    </defs>
+  </svg>
+
+  <main>
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- Piezas gigantes en las esquinas (tomadas de la tapa) -->
+      <div class="hero__corners" aria-hidden="true">
+        <svg class="corner corner--tl" viewBox="0 0 770 330">
+          <path d="M-400 162.5H600" style="stroke:var(--azul)" stroke-width="325" stroke-linecap="round"/>
+          <circle cx="0" cy="162.5" r="162.5" style="fill:var(--azul-osc)"/><circle cx="600" cy="162.5" r="162.5" style="fill:var(--azul-osc)"/>
+          <circle cx="0" cy="162.5" r="39" fill="#fff"/><circle cx="600" cy="162.5" r="39" fill="#fff"/>
+        </svg>
+        <svg class="corner corner--tr" viewBox="0 0 530 740">
+          <path d="M164 0A560 560 0 0 0 724 560" style="stroke:var(--rojo)" stroke-width="325" fill="none"/>
+          <circle cx="164" cy="0" r="162.5" style="fill:var(--rojo-osc)"/><circle cx="164" cy="0" r="39" fill="#fff"/>
+        </svg>
+        <svg class="corner corner--bl" viewBox="0 0 530 740">
+          <path d="M164 0A560 560 0 0 0 724 560" style="stroke:var(--amarillo)" stroke-width="325" fill="none"/>
+          <circle cx="164" cy="0" r="162.5" style="fill:var(--amarillo-osc)"/><circle cx="164" cy="0" r="39" fill="#fff"/>
+        </svg>
+        <svg class="corner corner--br" viewBox="0 0 770 330">
+          <path d="M-400 162.5H600" style="stroke:var(--verde)" stroke-width="325" stroke-linecap="round"/>
+          <circle cx="0" cy="162.5" r="162.5" style="fill:var(--verde-osc)"/><circle cx="600" cy="162.5" r="162.5" style="fill:var(--verde-osc)"/>
+          <circle cx="0" cy="162.5" r="39" fill="#fff"/><circle cx="600" cy="162.5" r="39" fill="#fff"/>
+        </svg>
+      </div>
+
+      <div class="hero__inner">
+        <p class="chip hero__chip">Mes de las Infancias · Agosto</p>
+        <h1 id="hero-title" class="hero__logo">
+          <span class="sr-only">LAZZO</span>
+          <svg viewBox="0 0 782 210" aria-hidden="true"><use href="#logo"/></svg>
+        </h1>
+        <p class="hero__tagline">Encastre, ingenio y velocidad</p>
+        <ul class="hero__pills" aria-label="Edad y jugadores">
+          <li class="pill">+5 años</li>
+          <li class="pill">+2
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-label="jugadores" role="img"><circle cx="12" cy="7.5" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><ellipse cx="12" cy="17.5" rx="6.5" ry="3.8" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </li>
+        </ul>
+        <p class="hero__text">Un juego de mesa lúdico-terapéutico para las salas del nivel inicial. Las manos encastran, la cabeza planifica y el equipo corre para copiar la figura antes que nadie.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--negro" href="#pedido">Quiero LAZZO en mi jardín</a>
+          <a class="btn btn--linea" href="#manual">¿Cómo se juega?</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. PROYECTO ============ -->
+    <section class="section proyecto" id="proyecto" aria-labelledby="proyecto-title">
+      <div class="container">
+        <p class="kicker reveal"><span>01</span> El proyecto</p>
+        <div class="proyecto__intro">
+          <h2 id="proyecto-title" class="display reveal">Los lazos <span class="hl hl--rojo">unen</span>.</h2>
+          <div class="proyecto__text reveal">
+            <p class="lead">LAZZO es un juego de mesa lúdico-terapéutico creado por una fundación de la Ciudad de Buenos Aires especializada en psicomotricidad y desarrollo cognitivo infantil, para celebrar el Mes de las Infancias.</p>
+            <p>Llega a los jardines como material didáctico y terapéutico para usar en la sala. El nombre nace de la idea de conexión: en cada partida se forman lazos todo el tiempo, entre las piezas y entre compañeras y compañeros de juego.</p>
+          </div>
+        </div>
+
+        <ul class="pilares">
+          <li class="pilar reveal" style="--c:var(--verde);--co:var(--verde-osc)">
+            <svg class="pilar__pz" viewBox="-40 -40 330 80" aria-hidden="true"><path d="M0 0H250" style="stroke:var(--c)" stroke-width="72" stroke-linecap="round"/><circle cx="0" cy="0" r="36" style="fill:var(--co)"/><circle cx="125" cy="0" r="36" style="fill:var(--co)"/><circle cx="250" cy="0" r="36" style="fill:var(--co)"/><circle cx="0" cy="0" r="11" fill="#fff"/><circle cx="125" cy="0" r="11" fill="#fff"/><circle cx="250" cy="0" r="11" fill="#fff"/></svg>
+            <h3>Encastre</h3>
+            <p><strong>Psicomotricidad fina.</strong> Tomar cada forma con pinza, girarla y hacerla coincidir con los puntos del tablero entrena la precisión y la coordinación ojo-mano.</p>
+          </li>
+          <li class="pilar reveal" style="--c:var(--azul);--co:var(--azul-osc)">
+            <svg class="pilar__pz" viewBox="-40 -170 330 210" aria-hidden="true"><path d="M0 0A125 125 0 0 1 250 0" style="stroke:var(--c)" stroke-width="72" fill="none"/><circle cx="0" cy="0" r="36" style="fill:var(--co)"/><circle cx="125" cy="-125" r="36" style="fill:var(--co)"/><circle cx="250" cy="0" r="36" style="fill:var(--co)"/><circle cx="0" cy="0" r="11" fill="#fff"/><circle cx="125" cy="-125" r="11" fill="#fff"/><circle cx="250" cy="0" r="11" fill="#fff"/></svg>
+            <h3>Ingenio</h3>
+            <p><strong>Pensamiento estratégico.</strong> Mirar la carta, elegir qué pieza va primero y anticipar cómo se conecta con la siguiente: planificar antes de actuar.</p>
+          </li>
+          <li class="pilar reveal" style="--c:var(--rojo);--co:var(--rojo-osc)">
+            <svg class="pilar__pz" viewBox="-40 -40 250 250" aria-hidden="true"><path d="M0 0L170 170" style="stroke:var(--c)" stroke-width="72" stroke-linecap="round"/><circle cx="0" cy="0" r="36" style="fill:var(--co)"/><circle cx="170" cy="170" r="36" style="fill:var(--co)"/><circle cx="0" cy="0" r="11" fill="#fff"/><circle cx="170" cy="170" r="11" fill="#fff"/></svg>
+            <h3>Velocidad</h3>
+            <p><strong>Agilidad y equipo.</strong> Gana el equipo que copia la figura primero y toca el timbre. Se juega rápido, se juega juntos y se aprende a esperar el turno.</p>
+          </li>
+        </ul>
+
+        <div class="stats">
+          <div class="stat reveal">
+            <p class="stat__num"><span class="count" data-to="1030">1.030</span></p>
+            <p class="stat__label">jardines de infantes en CABA</p>
+            <p class="stat__detail"><strong>400</strong> estatales · <strong>500</strong> privados · <strong>130</strong> especiales</p>
+          </div>
+          <div class="stat reveal">
+            <p class="stat__num"><span class="count" data-to="21600">21.600</span></p>
+            <p class="stat__label">juegos, para que cada sala tenga los suyos</p>
+            <ul class="stat__tiers">
+              <li><strong>5.400</strong><span>2 por sala</span></li>
+              <li><strong>10.800</strong><span>4 por sala</span></li>
+              <li><strong>21.600</strong><span>8 por sala</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. FOTOS ============ -->
+    <section class="section fotos" id="fotos" aria-labelledby="fotos-title">
+      <div class="fotos__pin">
+        <div class="container fotos__head">
+          <p class="kicker reveal"><span>02</span> Fotos</p>
+          <h2 id="fotos-title" class="display reveal">El juego, de cerca.</h2>
+        </div>
+        <div class="fotos__viewport">
+          <ul class="fotos__track">
+            <li class="foto">
+              <figure>
+                <div class="foto__img"><img src="img/figma/tapa.png" alt="Tapa de la caja de LAZZO: logo en el centro y cuatro piezas gigantes en las esquinas" width="1474" height="1474" loading="lazy"></div>
+                <figcaption><strong>La tapa</strong>Cartón forrado con laminado brillante y laca UV sectorizada.</figcaption>
+              </figure>
+            </li>
+            <li class="foto">
+              <figure>
+                <div class="foto__img"><img src="img/figma/contratapa.png" alt="Contratapa de la caja con el texto de presentación y el contenido: tableros, formas, cartas ilustradas y carta de instrucciones" width="1400" height="1400" loading="lazy"></div>
+                <figcaption><strong>¿Qué contiene?</strong>Tableros, formas, cartas ilustradas y la carta de instrucciones.</figcaption>
+              </figure>
+            </li>
+            <li class="foto">
+              <figure>
+                <div class="foto__img foto__img--cartas"><img src="img/figma/cartas.png" alt="Las 30 cartas ilustradas: carita feliz, payaso triste, mariposa, planta, nube, palmera, flor, molino, helado, pez, pájaro, cámara de fotos, cangrejo, perro, velero, nave espacial, conejo, casa, lápiz, robot, hongos, fantasma, gato, corazón, mate, locomotora, auto, bicicleta, regalo y ratón" width="887" height="1186" loading="lazy"></div>
+                <figcaption><strong>30 cartas ilustradas</strong>Una figura para copiar en cada una, con su nombre y su nivel.</figcaption>
+              </figure>
+            </li>
+            <li class="foto">
+              <figure>
+                <div class="foto__img foto__img--dorsos">
+                  <img src="img/figma/dorso-carta.png" alt="Dorso azul de las cartas ilustradas con el logo en blanco" width="567" height="567" loading="lazy">
+                  <img src="img/figma/dorso-instrucciones.png" alt="Dorso rojo de la carta de instrucciones" width="567" height="567" loading="lazy">
+                </div>
+                <figcaption><strong>Los dorsos</strong>Azul para las cartas, rojo para las instrucciones.</figcaption>
+              </figure>
+            </li>
+            <li class="foto">
+              <figure>
+                <div class="foto__img"><img src="img/figma/proceso.jpg" alt="Collage del proceso de prototipado: piezas pintadas, tablero con tarugos, pruebas de juego y la caja" width="841" height="957" loading="lazy"></div>
+                <figcaption><strong>El prototipo</strong>Cortar, pintar, probar y volver a probar.</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cinta de cartas -->
+    <div class="cartas-band" aria-hidden="true">
+      <div class="cartas-band__row" data-cartas="0"></div>
+      <div class="cartas-band__row cartas-band__row--rev" data-cartas="1"></div>
+    </div>
+
+    <!-- ============ 4. DETALLES ============ -->
+    <section class="section detalles" id="detalles" aria-labelledby="detalles-title">
+      <div class="container">
+        <p class="kicker reveal"><span>03</span> Detalles</p>
+        <h2 id="detalles-title" class="display reveal">Pensado pieza por pieza.</h2>
+
+        <div class="panel piezas reveal">
+          <div class="piezas__head">
+            <h3>10 formas · 4 colores</h3>
+            <p>Rectas, diagonales y curvas que, combinadas, dibujan cualquier cosa: una casa, un pez, un robot.</p>
+          </div>
+          <div class="piezas__grid" data-catalogo aria-hidden="true"></div>
+        </div>
+
+        <div class="detalles__duo">
+          <div class="panel encastre">
+            <div class="encastre__stage" data-encastre aria-hidden="true"></div>
+            <div class="encastre__copy reveal">
+              <h3>¿Por qué encastran?</h3>
+              <p>Cada ficha está estampada en <strong>dos tonos</strong>. El círculo más oscuro marca el punto de unión: ahí una ficha se superpone con la siguiente y encastra en el tablero.</p>
+              <p>El color más oscuro simula la fusión que se produce al superponer las piezas, así el dibujo se lee continuo, como un solo trazo.</p>
+            </div>
+          </div>
+
+          <div class="panel carta-info">
+            <div class="carta-info__img reveal">
+              <img src="img/figma/cartas/conejo.png" alt="Carta del conejo, nivel alto, con la figura armada sobre la grilla de puntos" width="168" height="168" loading="lazy">
+            </div>
+            <div class="carta-info__copy reveal">
+              <h3>Cartas que enseñan a leer</h3>
+              <p>En cada carta está el nombre de la figura que se arma. Desde los 5 años empiezan a asociar el objeto con su palabra: la lectura aparece de forma visual y divertida.</p>
+              <ul class="niveles" aria-label="Niveles de dificultad">
+                <li><span class="stars" data-n="1" aria-hidden="true"></span>Bajo</li>
+                <li><span class="stars" data-n="2" aria-hidden="true"></span>Medio</li>
+                <li><span class="stars" data-n="3" aria-hidden="true"></span>Alto</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Componentes con códigos de color -->
+        <h3 class="subhead reveal">Componentes y códigos de color</h3>
+        <ul class="componentes">
+          <li class="comp reveal">
+            <p class="comp__n">A</p>
+            <h4>Tablero</h4>
+            <dl class="comp__specs">
+              <div><dt>Material</dt><dd>Cartulina 350 g</dd></div>
+              <div><dt>Impresión</dt><dd>CMYK 4/0, simple faz</dd></div>
+            </dl>
+            <ul class="swatches">
+              <li style="--c:#FFFFFF"><span>Blanco</span><code>C0 M0 Y0 K0</code><code>#FFFFFF</code></li>
+              <li style="--c:var(--negro)"><span>Negro</span><code>C0 M0 Y0 K100</code><code>#1E1E1E</code></li>
+            </ul>
+          </li>
+          <li class="comp reveal">
+            <p class="comp__n">B</p>
+            <h4>Fichas</h4>
+            <dl class="comp__specs">
+              <div><dt>Material</dt><dd>Placa de 2 mm de espesor</dd></div>
+              <div><dt>Proceso</dt><dd>Corte láser + serigrafía industrial, 2 tonos por color</dd></div>
+            </dl>
+            <ul class="swatches swatches--pares">
+              <li style="--c:var(--rojo)"><span>Rojo</span><code>C0 M80 Y75 K0</code><code>#FF533B</code></li>
+              <li style="--c:var(--rojo-osc)"><span>Rojo osc.</span><code>C0 M100 Y100 K0</code><code>#EB1013</code></li>
+              <li style="--c:var(--amarillo)"><span>Amarillo</span><code>C0 M20 Y100 K0</code><code>#FFCB04</code></li>
+              <li style="--c:var(--amarillo-osc)"><span>Amarillo osc.</span><code>C0 M40 Y100 K0</code><code>#FEA100</code></li>
+              <li style="--c:var(--verde)"><span>Verde</span><code>C80 M0 Y85 K0</code><code>#00B45B</code></li>
+              <li style="--c:var(--verde-osc)"><span>Verde osc.</span><code>C85 M10 Y90 K10</code><code>#00984D</code></li>
+              <li style="--c:var(--azul)"><span>Azul</span><code>C85 M30 Y0 K0</code><code>#0290E0</code></li>
+              <li style="--c:var(--azul-osc)"><span>Azul osc.</span><code>C95 M50 Y0 K0</code><code>#0174B5</code></li>
+            </ul>
+          </li>
+          <li class="comp reveal">
+            <p class="comp__n">C</p>
+            <h4>Cartas ilustradas</h4>
+            <dl class="comp__specs">
+              <div><dt>Material</dt><dd>Ilustración 300 g</dd></div>
+              <div><dt>Impresión</dt><dd>Offset CMYK 4/4, doble faz</dd></div>
+            </dl>
+            <ul class="swatches">
+              <li style="--c:var(--azul)"><span>Dorso</span><code>C85 M30 Y0 K0</code><code>#0290E0</code></li>
+              <li style="--c:var(--azul-osc)"><span>Trama</span><code>C95 M50 Y0 K0</code><code>#0174B5</code></li>
+              <li style="--c:var(--amarillo)"><span>Estrellas</span><code>C0 M20 Y100 K0</code><code>#FFCB04</code></li>
+            </ul>
+          </li>
+          <li class="comp reveal">
+            <p class="comp__n">D</p>
+            <h4>Manual de instrucciones</h4>
+            <dl class="comp__specs">
+              <div><dt>Material</dt><dd>Ilustración 300 g</dd></div>
+              <div><dt>Impresión</dt><dd>Offset CMYK 4/4</dd></div>
+            </dl>
+            <ul class="swatches">
+              <li style="--c:var(--rojo)"><span>Dorso</span><code>C0 M80 Y75 K0</code><code>#FF533B</code></li>
+              <li style="--c:var(--rojo-osc)"><span>Trama</span><code>C0 M100 Y100 K0</code><code>#EB1013</code></li>
+              <li style="--c:var(--negro)"><span>Texto</span><code>C0 M0 Y0 K100</code><code>#1E1E1E</code></li>
+            </ul>
+          </li>
+          <li class="comp reveal">
+            <p class="comp__n">E</p>
+            <h4>Caja contenedora</h4>
+            <dl class="comp__specs">
+              <div><dt>Material</dt><dd>Cartón forrado</dd></div>
+              <div><dt>Impresión</dt><dd>CMYK 4/0, simple faz</dd></div>
+              <div><dt>Terminación</dt><dd>Laminado brillante + laca UV sectorizada</dd></div>
+            </dl>
+            <ul class="swatches">
+              <li style="--c:var(--azul)"><span>Azul</span><code>C85 M30 Y0 K0</code><code>#0290E0</code></li>
+              <li style="--c:var(--rojo)"><span>Rojo</span><code>C0 M80 Y75 K0</code><code>#FF533B</code></li>
+              <li style="--c:var(--amarillo)"><span>Amarillo</span><code>C0 M20 Y100 K0</code><code>#FFCB04</code></li>
+              <li style="--c:var(--verde)"><span>Verde</span><code>C80 M0 Y85 K0</code><code>#00B45B</code></li>
+            </ul>
+          </li>
+          <li class="comp comp--especial reveal">
+            <p class="comp__n">F</p>
+            <h4>Tablero especial</h4>
+            <dl class="comp__specs">
+              <div><dt>Destino</dt><dd>Salas de educación especial</dd></div>
+              <div><dt>Formato</dt><dd>Gran formato, para jugar alrededor</dd></div>
+              <div><dt>Material</dt><dd>Placa rígida, resistente y lavable</dd></div>
+            </dl>
+            <ul class="swatches">
+              <li style="--c:#FFFFFF"><span>Blanco</span><code>C0 M0 Y0 K0</code><code>#FFFFFF</code></li>
+              <li style="--c:var(--negro)"><span>Negro</span><code>C0 M0 Y0 K100</code><code>#1E1E1E</code></li>
+            </ul>
+          </li>
+        </ul>
+        <p class="nota reveal">Valores CMYK de referencia: se ajustan con la prueba de color de cada taller.</p>
+      </div>
+    </section>
+
+    <!-- ============ 5. EN USO ============ -->
+    <section class="section uso" id="en-uso" aria-labelledby="uso-title">
+      <div class="uso__pin">
+        <div class="container">
+          <p class="kicker reveal"><span>04</span> En uso</p>
+          <h2 id="uso-title" class="display reveal">Mirar, encastrar y… ¡tocar el timbre!</h2>
+          <div class="armado">
+            <div class="armado__carta">
+              <p class="armado__label">La carta</p>
+              <div class="armado__card" data-carta aria-hidden="true"></div>
+            </div>
+            <div class="armado__tablero">
+              <p class="armado__label">El tablero del equipo</p>
+              <div class="armado__board" data-tablero role="img" aria-label="Animación: las piezas se encastran en el tablero hasta formar la casa de la carta"></div>
+              <p class="armado__ding" data-ding>¡Ding! +1 punto</p>
+            </div>
+          </div>
+          <p class="armado__progress" aria-hidden="true"><span data-progress>0</span> / <span data-total>0</span> piezas</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="escenas">
+          <li class="escena reveal" style="--c:var(--azul)">
+            <p class="escena__tag">Salas de 5</p>
+            <h3>En la sala</h3>
+            <p>Hasta cuatro equipos, un tablero por equipo. La docente da vuelta la carta y empieza la carrera por copiar la figura.</p>
+          </li>
+          <li class="escena reveal" style="--c:var(--rojo)">
+            <p class="escena__tag">Psicomotricidad</p>
+            <h3>En terapia</h3>
+            <p>Los tres niveles de las cartas permiten graduar la dificultad y seguir la evolución de la motricidad fina, sesión a sesión.</p>
+          </li>
+          <li class="escena reveal" style="--c:var(--verde)">
+            <p class="escena__tag">Educación especial</p>
+            <h3>Tablero especial</h3>
+            <p>Más grande y más resistente, para jugar alrededor. Acá no se compite: todo el grupo arma una misma figura.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 6. MANUAL + DATOS TÉCNICOS ============ -->
+    <section class="section manual" id="manual" aria-labelledby="manual-title">
+      <div class="container">
+        <p class="kicker reveal"><span>05</span> Manual del juego</p>
+        <h2 id="manual-title" class="display reveal">¿Cómo jugamos?</h2>
+
+        <div class="equipos reveal" aria-label="Cantidad de jugadores: de 1 a 4 equipos">
+          <p class="equipos__title">Cantidad de jugadores</p>
+          <ul>
+            <li style="--c:var(--rojo)"><svg viewBox="0 0 40 32" aria-hidden="true"><use href="#equipo"/></svg>Equipo 1</li>
+            <li style="--c:var(--amarillo-osc)"><svg viewBox="0 0 40 32" aria-hidden="true"><use href="#equipo"/></svg>Equipo 2</li>
+            <li style="--c:var(--azul)"><svg viewBox="0 0 40 32" aria-hidden="true"><use href="#equipo"/></svg>Equipo 3</li>
+            <li style="--c:var(--verde)"><svg viewBox="0 0 40 32" aria-hidden="true"><use href="#equipo"/></svg>Equipo 4</li>
+          </ul>
+        </div>
+
+        <ol class="pasos">
+          <li class="paso reveal" style="--c:var(--rojo)">
+            <h3>Agarramos un tablero por equipo</h3>
+            <p>Cada equipo se sienta alrededor de su tablero.</p>
+          </li>
+          <li class="paso reveal" style="--c:var(--amarillo)">
+            <h3>Preparamos nuestras formas</h3>
+            <p>Separamos las piezas y las dejamos a mano, a la vista de todos.</p>
+          </li>
+          <li class="paso reveal" style="--c:var(--azul)">
+            <h3>Elegimos una de las cartas</h3>
+            <p>La damos vuelta en el centro de la mesa. ¡Ya!</p>
+          </li>
+          <li class="paso reveal" style="--c:var(--verde)">
+            <h3>Copiamos el dibujo sobre el tablero</h3>
+            <p>Encastramos las formas sobre los puntos hasta que la figura quede igual a la de la carta.</p>
+          </li>
+        </ol>
+
+        <div class="reglas">
+          <div class="regla reveal">
+            <h3>¿Quién gana?</h3>
+            <p>El equipo que termina primero hace sonar el timbre para finalizar la partida, y gana <strong>1 punto</strong>.</p>
+          </div>
+          <div class="regla regla--extra reveal">
+            <h3>Puntaje extra</h3>
+            <p>Si logran copiar el dibujo con exactamente los mismos colores que muestra la carta, ganan <strong>1 punto extra</strong>.</p>
+          </div>
+          <div class="regla reveal">
+            <h3>Nivel de dificultad</h3>
+            <ul class="niveles niveles--row">
+              <li><span class="stars" data-n="1" aria-hidden="true"></span>Bajo</li>
+              <li><span class="stars" data-n="2" aria-hidden="true"></span>Medio</li>
+              <li><span class="stars" data-n="3" aria-hidden="true"></span>Alto</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel tecnica reveal" aria-labelledby="tecnica-title">
+          <h3 id="tecnica-title">Datos técnicos</h3>
+          <dl>
+            <div><dt>Edad</dt><dd>A partir de 5 años</dd></div>
+            <div><dt>Jugadores</dt><dd>2 o más, hasta 4 equipos</dd></div>
+            <div><dt>Contenido</dt><dd>4 tableros · 50 formas · 30 cartas ilustradas · 1 carta de instrucciones</dd></div>
+            <div><dt>Tablero</dt><dd>Cartulina 350 g · CMYK 4/0 · simple faz</dd></div>
+            <div><dt>Fichas</dt><dd>Placa de 2 mm · corte láser · serigrafía industrial</dd></div>
+            <div><dt>Cartas</dt><dd>Ilustración 300 g · offset CMYK 4/4 · doble faz</dd></div>
+            <div><dt>Manual</dt><dd>Ilustración 300 g · offset CMYK 4/4</dd></div>
+            <div><dt>Caja</dt><dd>Cartón forrado · CMYK 4/0 · laminado brillante + laca UV sectorizada</dd></div>
+            <div><dt>Tablero especial</dt><dd>Gran formato · placa rígida, resistente y lavable</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+          <g id="equipo" fill="none" style="stroke:var(--c)" stroke-width="2.2">
+            <circle cx="14" cy="9" r="5"/><path d="M4 28c0-6 4.5-9 10-9s10 3 10 9"/>
+            <circle cx="27" cy="9" r="5"/><path d="M26 19c6 0 10 3 10 9"/>
+          </g>
+        </defs>
+      </svg>
+    </section>
+
+    <!-- ============ 7. CTA ============ -->
+    <section class="section cta" id="pedido" aria-labelledby="cta-title" data-pattern="rojo">
+      <div class="container cta__inner">
+        <header class="cta__head reveal">
+          <p class="kicker kicker--claro"><span>06</span> Pedido para instituciones</p>
+          <h2 id="cta-title" class="display">Llevá LAZZO a tu sala.</h2>
+          <p>Calculá cuántos juegos necesita tu jardín y dejanos tus datos: te escribimos para coordinar la entrega.</p>
+        </header>
+
+        <form class="pedido reveal" id="pedido-form" novalidate>
+          <fieldset class="pedido__calc">
+            <legend class="sr-only">Calculadora de juegos</legend>
+
+            <div class="field">
+              <span class="field__label" id="tipo-label">Tipo de institución</span>
+              <div class="seg" role="radiogroup" aria-labelledby="tipo-label">
+                <label><input type="radio" name="tipo" value="estatal" checked><span>Estatal</span></label>
+                <label><input type="radio" name="tipo" value="privada"><span>Privada</span></label>
+                <label><input type="radio" name="tipo" value="especial"><span>Especial</span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="salas">Cantidad de salas</label>
+              <div class="stepper">
+                <button type="button" data-step="-1" aria-label="Restar una sala">−</button>
+                <input id="salas" name="salas" type="number" inputmode="numeric" min="1" max="30" value="3">
+                <button type="button" data-step="1" aria-label="Sumar una sala">+</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="field__label" id="porsala-label">Juegos por sala</span>
+              <div class="seg" role="radiogroup" aria-labelledby="porsala-label">
+                <label><input type="radio" name="porsala" value="2"><span>2</span></label>
+                <label><input type="radio" name="porsala" value="4" checked><span>4</span></label>
+                <label><input type="radio" name="porsala" value="8"><span>8</span></label>
+              </div>
+            </div>
+
+            <div class="resultado" aria-live="polite">
+              <p class="resultado__num"><span id="total">12</span> juegos</p>
+              <p class="resultado__extra" id="extra">3 salas × 4 juegos por sala.</p>
+            </div>
+          </fieldset>
+
+          <fieldset class="pedido__datos">
+            <legend class="sr-only">Datos de contacto</legend>
+            <div class="field">
+              <label class="field__label" for="institucion">Institución</label>
+              <input id="institucion" name="institucion" type="text" autocomplete="organization" required placeholder="Jardín de Infantes N.º 1">
+            </div>
+            <div class="field">
+              <label class="field__label" for="nombre">Nombre y apellido</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <button class="btn btn--negro btn--block" type="submit">Enviar pedido</button>
+            <p class="pedido__ok" id="pedido-ok" hidden role="status">¡Gracias! Recibimos tu pedido y te vamos a escribir pronto.</p>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 8. FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <svg class="footer__logo" viewBox="0 0 782 210" role="img" aria-label="LAZZO"><use href="#logo"/></svg>
+        <p>Encastre, ingenio y velocidad.<br>Un juego lúdico-terapéutico para el Mes de las Infancias · CABA.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Secciones">
+        <a href="#proyecto">Proyecto</a>
+        <a href="#fotos">Fotos</a>
+        <a href="#detalles">Detalles</a>
+        <a href="#en-uso">En uso</a>
+        <a href="#manual">Manual</a>
+        <a href="#pedido">Pedido</a>
+      </nav>
+    </div>
+    <div class="container footer__legal">
+      <p>Proyecto académico · Tecnología 2 · Cátedra Zachin · FADU–UBA · 2026</p>
+      <p>Grupo XX · Nombre Apellido, Nombre Apellido, Nombre Apellido</p>
+    </div>
+  </footer>
+
+  <script src="vendor/gsap.min.js" defer></script>
+  <script src="vendor/ScrollTrigger.min.js" defer></script>
+  <script src="js/pieces.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
