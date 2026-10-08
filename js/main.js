@@ -88,7 +88,7 @@
   let cur = null;
   const place = () => {
     const a = links.find(l => l.classList.contains('act'));
-    if (!a || a.classList.contains('dock-cta')) { ind.classList.remove('on'); return; }
+    if (!a) { ind.classList.remove('on'); return; }
     ind.style.width = a.offsetWidth + 'px';
     ind.style.transform = `translateX(${a.offsetLeft}px)`;
     ind.classList.add('on');
