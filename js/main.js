@@ -120,4 +120,19 @@
   secs.forEach(s => {
     new IntersectionObserver(([e]) => { if (e.isIntersecting) setActive(s.id); }, { rootMargin: '-45% 0px -50% 0px' }).observe(s);
   });
+
+  /* ---- Copiar mail ---- */
+  $$('[data-copy]').forEach(btn => {
+    const lbl = $('.lbl', btn), ico = $('.ico', btn), txt = lbl.textContent;
+    let t;
+    btn.addEventListener('click', async () => {
+      const v = btn.dataset.copy;
+      try { await navigator.clipboard.writeText(v); }
+      catch { const r = document.createRange(); r.selectNodeContents(lbl); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand('copy'); s.removeAllRanges(); }
+      lbl.textContent = '¡Copiado!';
+      ico.classList.replace('i-copy', 'i-check');
+      clearTimeout(t);
+      t = setTimeout(() => { lbl.textContent = txt; ico.classList.replace('i-check', 'i-copy'); }, 1800);
+    });
+  });
 })();

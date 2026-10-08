@@ -296,3 +296,9 @@ h3{font-weight:600;letter-spacing:-.02em}
 .contacto .trama path{stroke:#EB1013;stroke-width:80}
 .contacto .trama .tr{position:absolute;overflow:visible;pointer-events:none}
 .contacto .trama path{fill:none;stroke-opacity:.55;stroke-linecap:round}
+
+.btn{font-family:inherit;cursor:pointer}
+button.btn.linea{background:transparent}
+.i-copy{--i:url(../img/icons/copy.svg)}.i-check{--i:url(../img/icons/check.svg)}
+.btn .lbl{display:inline-block;min-width:11.5em;text-align:left}
+.btn.ok .lbl{text-align:left}
