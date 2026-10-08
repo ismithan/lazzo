@@ -91,11 +91,7 @@
     // en Contacto el botón amarillo queda como está: el indicador se apaga
     if (!a) { ind.classList.remove('on'); hidden = true; return; }
     if (a.classList.contains('dock-cta')) {
-      // el indicador se desliza hacia Contacto mientras se desvanece; el botón sigue amarillo
-      if (!hidden) {
-        ind.style.width = (a.offsetWidth - 6) + 'px';
-        ind.style.transform = `translateX(${a.offsetLeft + 3}px)`;
-      }
+      // el negro simplemente se desvanece; el botón sigue amarillo
       ind.classList.remove('on');
       hidden = true;
       return;

@@ -198,7 +198,7 @@ h3{font-weight:600;letter-spacing:-.02em}
 .dock.on{transform:translate(-50%,0);opacity:1}
 .dock-logo img{height:clamp(22px,1.6vw,26px);width:auto}
 .dock-links{display:flex;gap:4px;align-items:center;position:relative}
-.dock-ind{position:absolute;left:0;top:0;height:42px;width:0;border-radius:99px;background:var(--negro);pointer-events:none;opacity:0;transition:transform .45s var(--ease),width .45s var(--ease),opacity .25s}
+.dock-ind{position:absolute;left:0;top:0;height:42px;width:0;border-radius:99px;background:var(--negro);pointer-events:none;opacity:0;transition:transform .45s var(--ease),width .45s var(--ease),opacity .3s var(--ease)}
 .dock-ind.on{opacity:1}
 .dock-links a{position:relative;z-index:1}
 .dock-links a{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 clamp(12px,1.2vw,20px);border-radius:99px;font-size:clamp(14px,1vw,16px);font-weight:500;transition:background-color .3s var(--ease),color .3s var(--ease)}
