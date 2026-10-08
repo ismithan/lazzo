@@ -96,22 +96,7 @@ h3{font-weight:600;letter-spacing:-.02em}
 
 /* ============ FOTO ============ */
 .foto{padding-block:clamp(24px,3vw,56px) var(--sec)}
-.escena{position:relative;width:min(1424px,100% - 2*var(--gut));aspect-ratio:1424/720;margin-inline:auto}
-.escena img{position:absolute;height:auto}
-.caja{left:3%;top:15%;width:39.5%;border-radius:2.2%;filter:drop-shadow(0 2px 3px rgba(var(--ink),.12)) drop-shadow(0 14px 22px rgba(var(--ink),.14)) drop-shadow(0 40px 60px rgba(var(--ink),.14))}
-.dorso,.c{border-radius:5%;filter:drop-shadow(0 2px 3px rgba(var(--ink),.14)) drop-shadow(0 12px 20px rgba(var(--ink),.16)) drop-shadow(0 28px 40px rgba(var(--ink),.12))}
-.d1{left:44%;top:4%;width:22.5%}
-.d2{left:56.5%;top:20%;width:22.5%;transform:rotate(1deg)}
-.c{width:18.5%;background:#fff}
-.c1{left:38%;top:58%;transform:rotate(-7deg)}
-.c2{left:49.5%;top:56%;transform:rotate(-3deg)}
-.c3{left:60%;top:55%;transform:rotate(4deg)}
-.p{filter:drop-shadow(0 6px 10px rgba(var(--ink),.2))}
-.p1{left:36%;top:3%;width:7.5%;transform:rotate(-25deg)}
-.p2{left:72%;top:2%;width:8%}
-.p3{left:80%;top:48%;width:8%;transform:rotate(-20deg)}
-.p4{left:75%;top:74%;width:7%;transform:rotate(-30deg)}
-.p5{left:10%;top:90%;width:9%;transform:rotate(-20deg)}
+.foto-img{width:min(1424px,100% - 2*var(--gut));height:auto;margin-inline:auto}
 
 /* ============ DETALLES / CINTA ============ */
 #detalles{padding-bottom:var(--sec)}
