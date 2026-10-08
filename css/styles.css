@@ -225,7 +225,7 @@ h3{font-weight:600;letter-spacing:-.02em}
 .dock-links a.act .ico{width:20px;margin-left:0;opacity:1}
 .dock-links a.dock-cta{background:var(--amarillo);color:var(--negro);font-weight:600;margin-left:4px}
 .dock-links a.dock-cta:hover{background:#ffd633}
-.dock-links a.dock-cta.act{background:transparent;color:var(--amarillo)}
+.dock-links a.dock-cta.act{background:var(--amarillo);color:var(--negro)}
 
 @media (max-width:1100px){
   .dock-logo{display:none}
