@@ -262,3 +262,18 @@ h3{font-weight:600;letter-spacing:-.02em}
 #proyecto .dato{padding:clamp(16px,min(2.2vw,3svh),42px)}
 #proyecto .dato h3{margin-top:clamp(4px,.8svh,16px)}
 #proyecto .sub{margin-top:clamp(8px,1.4svh,24px);padding-top:clamp(6px,1.1svh,16px)}
+/* Proyecto: más alto, sin límite de 100vh */
+#proyecto{min-height:0;display:block;padding-block:var(--sec)}
+#proyecto .h2{font-size:clamp(44px,4.1vw,78px)}
+#proyecto .lead{margin-top:clamp(18px,1.6vw,28px);font-size:clamp(17px,1.25vw,24px)}
+#proyecto .pilares{margin-top:clamp(36px,4vw,72px)}
+#proyecto .pilar{height:clamp(340px,30vw,560px);padding:clamp(24px,2.2vw,42px)}
+#proyecto .pilar img{max-height:clamp(120px,12.5vw,240px);width:75%;margin-bottom:clamp(18px,2vw,40px)}
+#proyecto .pilar h3{font-size:clamp(28px,2.1vw,40px)}
+#proyecto .pilar p{font-size:clamp(14px,1vw,17px);margin-top:8px}
+#proyecto .dato{padding:clamp(28px,2.6vw,50px)}
+#proyecto .num{font-size:clamp(60px,5.6vw,108px)}
+#proyecto .dato h3{font-size:clamp(20px,1.6vw,30px);margin-top:clamp(10px,1vw,18px)}
+#proyecto .dato p{font-size:clamp(14px,1vw,18px);margin-top:8px}
+#proyecto .sub{margin-top:clamp(18px,1.8vw,32px);padding-top:clamp(14px,1.3vw,22px)}
+#proyecto .sub b{font-size:clamp(22px,1.7vw,32px)}
