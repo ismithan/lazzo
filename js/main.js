@@ -81,8 +81,28 @@
   const links = $$('.dock-links a');
   new IntersectionObserver(([e]) => dock.classList.toggle('on', !e.isIntersecting), { threshold: 0.6 }).observe(hero);
   const secs = ['proyecto','detalles','uso','manual','contacto'].map(id => document.getElementById(id));
-  const setActive = id => links.forEach(a => a.classList.toggle('act', a.dataset.s === id));
+  const wrapL = $('.dock-links');
+  const ind = document.createElement('i');
+  ind.className = 'dock-ind';
+  wrapL.prepend(ind);
+  let cur = null;
+  const place = () => {
+    const a = links.find(l => l.classList.contains('act'));
+    if (!a) { ind.classList.remove('on'); return; }
+    ind.style.width = a.offsetWidth + 'px';
+    ind.style.transform = `translateX(${a.offsetLeft}px)`;
+    ind.classList.add('on');
+  };
+  const setActive = id => {
+    if (id === cur) return;
+    const first = cur === null;
+    cur = id;
+    links.forEach(a => a.classList.toggle('act', a.dataset.s === id));
+    if (first) { ind.style.transition = 'opacity .25s'; place(); requestAnimationFrame(() => ind.style.transition = ''); return; }
+    place();
+  };
+  addEventListener('resize', place);
   secs.forEach(s => {
-      new IntersectionObserver(([e]) => { if (e.isIntersecting) setActive(s.id); }, { rootMargin: '-45% 0px -50% 0px' }).observe(s);
-    });
+    new IntersectionObserver(([e]) => { if (e.isIntersecting) setActive(s.id); }, { rootMargin: '-45% 0px -50% 0px' }).observe(s);
+  });
 })();
