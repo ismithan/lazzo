@@ -85,20 +85,29 @@
   const ind = document.createElement('i');
   ind.className = 'dock-ind';
   wrapL.prepend(ind);
-  let cur = null;
-  const place = () => {
+  let cur = null, hidden = true;
+  const place = (instant) => {
     const a = links.find(l => l.classList.contains('act'));
-    if (!a) { ind.classList.remove('on'); return; }
+    // en Contacto el botón amarillo queda como está: el indicador se apaga
+    if (!a || a.classList.contains('dock-cta')) { ind.classList.remove('on'); hidden = true; return; }
+    if (hidden || instant) {
+      ind.style.transition = 'opacity .25s var(--ease)';
+      ind.style.width = a.offsetWidth + 'px';
+      ind.style.transform = `translateX(${a.offsetLeft}px)`;
+      void ind.offsetWidth;
+      ind.classList.add('on');
+      requestAnimationFrame(() => ind.style.transition = '');
+      hidden = false;
+      return;
+    }
     ind.style.width = a.offsetWidth + 'px';
     ind.style.transform = `translateX(${a.offsetLeft}px)`;
     ind.classList.add('on');
   };
   const setActive = id => {
     if (id === cur) return;
-    const first = cur === null;
     cur = id;
     links.forEach(a => a.classList.toggle('act', a.dataset.s === id));
-    if (first || !ind.classList.contains('on')) { ind.style.transition = 'opacity .25s'; place(); requestAnimationFrame(() => requestAnimationFrame(() => ind.style.transition = '')); return; }
     place();
   };
   addEventListener('resize', place);
