@@ -191,8 +191,9 @@ h3{font-weight:600;letter-spacing:-.02em}
 .f-bot{display:flex;justify-content:space-between;margin-top:clamp(32px,3vw,52px);padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;color:#8d8d8d;gap:12px;flex-wrap:wrap}
 
 /* ============ DOCK ============ */
-.dock{position:fixed;left:50%;bottom:clamp(14px,1.5vw,26px);z-index:50;display:flex;align-items:center;gap:clamp(8px,1vw,18px);padding:10px 12px 10px clamp(14px,1.4vw,24px);border-radius:99px;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border:1px solid rgba(0,0,0,.08);box-shadow:0 1px 2px rgba(var(--ink),.08),0 10px 30px rgba(var(--ink),.14);transform:translate(-50%,160%);opacity:0;transition:transform .5s var(--ease),opacity .3s var(--ease)}
+.dock{width:max-content;max-width:calc(100vw - 24px);position:fixed;left:50%;bottom:clamp(14px,1.5vw,26px);z-index:50;display:flex;align-items:center;gap:clamp(8px,1vw,18px);padding:10px 12px 10px clamp(14px,1.4vw,24px);border-radius:99px;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border:1px solid rgba(0,0,0,.08);box-shadow:0 1px 2px rgba(var(--ink),.08),0 10px 30px rgba(var(--ink),.14);transform:translate(-50%,160%);opacity:0;transition:transform .5s var(--ease),opacity .3s var(--ease)}
 .dock.on{transform:translate(-50%,0);opacity:1}
+.dock-logo{flex:none}
 .dock-logo img{height:clamp(22px,1.6vw,26px);width:auto}
 .dock-links{display:flex;gap:4px;align-items:center;position:relative}
 .dock-ind{position:absolute;left:0;top:0;height:42px;width:0;border-radius:99px;background:var(--negro);pointer-events:none;opacity:0;transition:transform .45s var(--ease),width .45s var(--ease),opacity .3s var(--ease)}
@@ -207,9 +208,6 @@ h3{font-weight:600;letter-spacing:-.02em}
 .dock-links a.dock-cta:hover{background:#ffd633}
 .dock-links a.dock-cta.act{background:var(--amarillo);color:var(--negro)}
 
-@media (max-width:1100px){
-  .dock-logo{display:none}
-}
 @media (prefers-reduced-motion:reduce){
   .hp,.hero-logo,.hero-tag,.hero-scroll{opacity:1!important;transform:none!important;transition:none!important;animation:none!important}
   .hero-scroll .ico{animation:none!important}
