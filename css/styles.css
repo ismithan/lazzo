@@ -279,3 +279,6 @@ h3{font-weight:600;letter-spacing:-.02em}
 #proyecto .sub b{font-size:clamp(22px,1.7vw,32px)}
 
 .dock-links a.dock-cta.act{padding-inline:calc(clamp(12px,1.2vw,20px) + 14px)}
+/* pilares sin aire sobrante abajo */
+#proyecto .pilar{height:auto;min-height:0}
+#proyecto .pilar img{flex:none;max-height:none;height:clamp(110px,11vw,210px);width:75%;margin:0 auto clamp(26px,2.6vw,52px)}
