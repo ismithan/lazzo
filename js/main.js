@@ -89,7 +89,17 @@
   const place = (instant) => {
     const a = links.find(l => l.classList.contains('act'));
     // en Contacto el botón amarillo queda como está: el indicador se apaga
-    if (!a || a.classList.contains('dock-cta')) { ind.classList.remove('on'); hidden = true; return; }
+    if (!a) { ind.classList.remove('on'); hidden = true; return; }
+    if (a.classList.contains('dock-cta')) {
+      // el indicador se desliza hacia Contacto mientras se desvanece; el botón sigue amarillo
+      if (!hidden) {
+        ind.style.width = (a.offsetWidth - 6) + 'px';
+        ind.style.transform = `translateX(${a.offsetLeft + 3}px)`;
+      }
+      ind.classList.remove('on');
+      hidden = true;
+      return;
+    }
     if (hidden || instant) {
       ind.style.transition = 'opacity .25s var(--ease)';
       ind.style.width = a.offsetWidth + 'px';

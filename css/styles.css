@@ -277,3 +277,5 @@ h3{font-weight:600;letter-spacing:-.02em}
 #proyecto .dato p{font-size:clamp(14px,1vw,18px);margin-top:8px}
 #proyecto .sub{margin-top:clamp(18px,1.8vw,32px);padding-top:clamp(14px,1.3vw,22px)}
 #proyecto .sub b{font-size:clamp(22px,1.7vw,32px)}
+
+.dock-links a.dock-cta.act{padding-inline:calc(clamp(12px,1.2vw,20px) + 14px)}
