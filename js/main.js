@@ -44,7 +44,7 @@
   addEventListener('resize', measure);
   measure();
 
-  const base = 0.045; // px por ms
+  const base = 0.03; // px por ms
   let last = performance.now(), boost = 0, scrollY0 = 0, heroH = innerHeight;
   const cinta = $('.cinta');
   let cintaVisible = false;
@@ -53,7 +53,7 @@
   function frame(now) {
     const dt = Math.min(now - last, 50); last = now;
     const v = lenis ? lenis.velocity : 0;
-    boost += ((Math.abs(v) * 0.9) - boost) * 0.08;
+    boost += ((Math.min(Math.abs(v), 40) * 0.9) - boost) * 0.06;
 
     // parallax del hero
     if (!reduce) {
@@ -62,7 +62,7 @@
     }
     if (cintaVisible && !reduce) {
       state.forEach(s => {
-        s.x += s.dir * (base + boost * 0.12) * dt;
+        s.x += s.dir * (base + boost * 0.006) * dt;
         if (s.x <= -s.w * 2) s.x += s.w;
         if (s.x >= 0) s.x -= s.w;
         s.el.style.transform = `translate3d(${s.x}px,0,0)`;
