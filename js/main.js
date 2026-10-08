@@ -79,7 +79,7 @@
   /* ---- Dock: aparece tras el hero + sección activa ---- */
   const dock = $('#dock');
   const links = $$('.dock-links a');
-  new IntersectionObserver(([e]) => dock.classList.toggle('on', !e.isIntersecting), { threshold: 0.6 }).observe(hero);
+  new IntersectionObserver(([e]) => dock.classList.toggle('on', e.intersectionRatio < 0.88), { threshold: [0, 0.88, 0.95, 1] }).observe(hero);
   const secs = ['proyecto','detalles','uso','manual','contacto'].map(id => document.getElementById(id));
   const wrapL = $('.dock-links');
   const ind = document.createElement('i');
