@@ -278,7 +278,6 @@ h3{font-weight:600;letter-spacing:-.02em}
 #proyecto .sub{margin-top:clamp(18px,1.8vw,32px);padding-top:clamp(14px,1.3vw,22px)}
 #proyecto .sub b{font-size:clamp(22px,1.7vw,32px)}
 
-.dock-links a.dock-cta.act{padding-inline:calc(clamp(12px,1.2vw,20px) + 14px)}
 /* pilares sin aire sobrante abajo */
 #proyecto .pilar{height:auto;min-height:0}
 #proyecto .pilar img{flex:none;max-height:none;height:clamp(110px,11vw,210px);width:75%;margin:0 auto clamp(26px,2.6vw,52px)}
@@ -290,3 +289,9 @@ h3{font-weight:600;letter-spacing:-.02em}
 #proyecto .sub{margin-top:auto;padding-top:clamp(12px,1.1vw,18px)}
 #proyecto .sub b{font-size:clamp(20px,1.5vw,28px)}
 #proyecto .sub span{font-size:clamp(11px,.8vw,13px)}
+
+/* ancho de cada link constante: el icono ocupa el lugar del padding extra */
+.dock-links a{padding-inline:calc(clamp(12px,1.2vw,20px) + 14px)}
+.dock-links a.act:not(.dock-cta){padding-inline:clamp(12px,1.2vw,20px)}
+.dock-links a{white-space:nowrap;padding-inline:calc(clamp(8px,.85vw,14px) + 14px)}
+.dock-links a.act:not(.dock-cta){padding-inline:clamp(8px,.85vw,14px)}
