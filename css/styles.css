@@ -282,3 +282,11 @@ h3{font-weight:600;letter-spacing:-.02em}
 /* pilares sin aire sobrante abajo */
 #proyecto .pilar{height:auto;min-height:0}
 #proyecto .pilar img{flex:none;max-height:none;height:clamp(110px,11vw,210px);width:75%;margin:0 auto clamp(26px,2.6vw,52px)}
+/* datos más compactos, tabla pegada abajo */
+#proyecto .dato{padding:clamp(22px,2vw,38px)}
+#proyecto .num{font-size:clamp(46px,4.4vw,84px)}
+#proyecto .dato h3{font-size:clamp(18px,1.3vw,25px);line-height:1.15;margin-top:clamp(8px,.8vw,14px)}
+#proyecto .dato p{font-size:clamp(13px,.9vw,16px);margin-top:6px;margin-bottom:clamp(16px,1.6vw,28px)}
+#proyecto .sub{margin-top:auto;padding-top:clamp(12px,1.1vw,18px)}
+#proyecto .sub b{font-size:clamp(20px,1.5vw,28px)}
+#proyecto .sub span{font-size:clamp(11px,.8vw,13px)}
