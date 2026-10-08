@@ -190,7 +190,8 @@ h3{font-weight:600;letter-spacing:-.02em}
 .btn:hover{transform:translateY(-2px)}
 .btn:active{transform:scale(.97)}
 .btn.blanco{background:#fff;color:var(--negro);box-shadow:0 8px 20px rgba(0,0,0,.14)}
-.btn.linea{border:2px solid #fff;color:#fff}
+.btn.linea{border:2px solid #fff;color:#fff;transition:transform .2s var(--ease),background-color .2s var(--ease),color .2s var(--ease)}
+.btn.linea:hover{background:#fff;color:var(--negro)}
 .contacto .d-a{left:-4%;top:8%;width:16%;height:16%;border-radius:99px;background:rgba(0,0,0,.08)}
 .contacto .d-b{right:-3%;top:-30%;width:22%;aspect-ratio:1;border-radius:50%;background:none;border:clamp(40px,4.4vw,84px) solid rgba(0,0,0,.08)}
 .contacto .d-c{right:3%;bottom:-40%;width:5%;height:90%;border-radius:99px;background:rgba(0,0,0,.08)}
