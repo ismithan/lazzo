@@ -255,3 +255,10 @@ h3{font-weight:600;letter-spacing:-.02em}
 #proyecto .sub{margin-top:clamp(10px,1.8svh,32px);padding-top:clamp(8px,1.4svh,22px)}
 #proyecto .sub b{font-size:clamp(20px,min(1.7vw,3.2svh),32px)}
 #proyecto .pilar img{flex:1;min-height:0;height:auto;max-height:clamp(56px,11svh,190px);width:70%;object-fit:contain;margin:0 auto clamp(8px,2svh,40px)}
+/* ajuste: pilares más altos, números de datos más chicos */
+#proyecto .pilar{height:clamp(200px,35svh,500px)}
+#proyecto .pilar img{max-height:clamp(70px,15svh,230px)}
+#proyecto .num{font-size:clamp(44px,min(5vw,9svh),100px)}
+#proyecto .dato{padding:clamp(16px,min(2.2vw,3svh),42px)}
+#proyecto .dato h3{margin-top:clamp(4px,.8svh,16px)}
+#proyecto .sub{margin-top:clamp(8px,1.4svh,24px);padding-top:clamp(6px,1.1svh,16px)}
