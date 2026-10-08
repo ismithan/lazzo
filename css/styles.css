@@ -165,7 +165,7 @@ h3{font-weight:600;letter-spacing:-.02em}
 .tec span:last-child{font-size:clamp(12px,1vw,18px);margin-top:2px}
 
 /* ============ CONTACTO ============ */
-.contacto{position:relative;background:var(--rojo);color:#fff;text-align:center;padding-block:clamp(72px,7vw,130px);overflow:hidden}
+.contacto{--k:calc(100vw/1920);position:relative;background:var(--rojo);color:#fff;text-align:center;padding-block:clamp(72px,7vw,130px);overflow:hidden}
 .contacto .wrap{z-index:1}
 .contacto h2{font-size:clamp(34px,2.7vw,52px);letter-spacing:-.03em;font-weight:600;line-height:1.1}
 .contacto p{font-size:clamp(15px,1.1vw,20px);margin-top:14px}
@@ -176,9 +176,6 @@ h3{font-weight:600;letter-spacing:-.02em}
 .btn.blanco{background:#fff;color:var(--negro);box-shadow:0 8px 20px rgba(0,0,0,.14)}
 .btn.linea{border:2px solid #fff;color:#fff;transition:transform .2s var(--ease),background-color .2s var(--ease),color .2s var(--ease)}
 .btn.linea:hover{background:#fff;color:var(--negro)}
-.contacto .d-a{left:-4%;top:8%;width:16%;height:16%;border-radius:99px;background:rgba(0,0,0,.08)}
-.contacto .d-b{right:-3%;top:-30%;width:22%;aspect-ratio:1;border-radius:50%;background:none;border:clamp(40px,4.4vw,84px) solid rgba(0,0,0,.08)}
-.contacto .d-c{right:3%;bottom:-40%;width:5%;height:90%;border-radius:99px;background:rgba(0,0,0,.08)}
 
 /* ============ FOOTER ============ */
 .footer{background:var(--negro);color:#fff;padding-block:clamp(40px,3.6vw,64px) clamp(20px,2vw,32px)}
@@ -295,3 +292,7 @@ h3{font-weight:600;letter-spacing:-.02em}
 .dock-links a.act:not(.dock-cta){padding-inline:clamp(12px,1.2vw,20px)}
 .dock-links a{white-space:nowrap;padding-inline:calc(clamp(8px,.85vw,14px) + 14px)}
 .dock-links a.act:not(.dock-cta){padding-inline:clamp(8px,.85vw,14px)}
+
+.contacto .trama path{stroke:#EB1013;stroke-width:80}
+.contacto .trama .tr{position:absolute;overflow:visible;pointer-events:none}
+.contacto .trama path{fill:none;stroke-opacity:.55;stroke-linecap:round}
