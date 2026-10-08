@@ -40,10 +40,10 @@ h3{font-weight:600;letter-spacing:-.02em}
 /* ============ HERO ============ */
 .hero{position:relative;height:100svh;min-height:600px;overflow:hidden;display:grid;place-items:center;background:#fff}
 .hp{position:absolute;height:auto;will-change:transform;opacity:0}
-.hp-azul{top:0;left:0;width:29.5%}
-.hp-verde{bottom:0;right:0;width:29.5%}
-.hp-roja{top:0;right:0;width:20.5%}
-.hp-amar{bottom:0;left:0;width:20.5%}
+.hp-azul{top:-14px;left:0;width:29.5%}
+.hp-verde{bottom:-14px;right:0;width:29.5%}
+.hp-roja{top:-14px;right:0;width:20.5%}
+.hp-amar{bottom:-14px;left:0;width:20.2%}
 .hero-centro{text-align:center;position:relative;z-index:2}
 .hero-logo{width:clamp(380px,33.3vw,640px);height:auto;margin-inline:auto;opacity:0}
 .hero-tag{margin-top:clamp(14px,1.3vw,24px);font-size:clamp(17px,1.56vw,30px);font-weight:500;letter-spacing:.005em;text-transform:uppercase;opacity:0}
@@ -65,11 +65,13 @@ h3{font-weight:600;letter-spacing:-.02em}
 .hero.go .hero-tag{transition:opacity .8s var(--ease) .65s,transform .9s var(--ease) .65s}
 .hero.go .hero-scroll{transition:opacity .8s ease 1.2s}
 .hero.idle .hp{transition:none}
-.hero.idle .hp-azul{animation:fl 7s ease-in-out infinite}
-.hero.idle .hp-verde{animation:fl 8s ease-in-out -2s infinite}
-.hero.idle .hp-roja{animation:fl 9s ease-in-out -4s infinite}
-.hero.idle .hp-amar{animation:fl 7.5s ease-in-out -1s infinite}
-@keyframes fl{50%{translate:0 -12px}}
+.hero.idle .hp-azul{animation:fd 7s ease-in-out infinite}
+.hero.idle .hp-verde{animation:fu 8s ease-in-out -2s infinite}
+.hero.idle .hp-roja{animation:fd 9s ease-in-out -4s infinite}
+.hero.idle .hp-amar{animation:fu 7.5s ease-in-out -1s infinite}
+/* las piezas salen 14px del borde y flotan hacia adentro, así nunca se ve el corte */
+@keyframes fd{50%{translate:0 14px}}
+@keyframes fu{50%{translate:0 -14px}}
 
 /* ============ PROYECTO ============ */
 .pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.25vw,24px);margin-top:clamp(36px,4vw,72px)}
