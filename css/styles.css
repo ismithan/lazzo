@@ -124,7 +124,7 @@ h3{font-weight:600;letter-spacing:-.02em}
 .explica h3{font-size:clamp(22px,1.8vw,35px)}
 .explica p{font-size:clamp(14px,1.05vw,20px);line-height:1.45;margin-top:10px}
 .ex-img{width:clamp(110px,10vw,190px);flex:none}
-.ex-carta{width:clamp(100px,8vw,155px);flex:none;border:2px solid var(--azul);border-radius:12px;background:#fff}
+.ex-carta{width:clamp(100px,8vw,155px);flex:none}
 
 /* ============ EN USO ============ */
 .uso{position:relative;background:var(--azul);color:#fff;padding-block:var(--sec);overflow:hidden}
