@@ -134,10 +134,8 @@ h3{font-weight:600;letter-spacing:-.02em}
 .uso .d-c{right:-4%;bottom:3%;width:16%;height:8%;border-radius:99px}
 .uso .wrap{z-index:1}
 .uso-main{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:4vw;margin-top:clamp(28px,3vw,56px)}
-.giro{position:relative;aspect-ratio:1.2;max-width:560px}
-.giro img{position:absolute;border-radius:7%;filter:drop-shadow(0 4px 6px rgba(0,0,0,.18)) drop-shadow(0 22px 36px rgba(0,0,0,.25))}
-.g-dorso{left:2%;top:18%;width:55%;transform:rotate(-8deg);border:3px solid #fff}
-.g-frente{left:25%;top:0;width:68%;transform:rotate(3deg);background:#fff}
+.giro{max-width:clamp(440px,38vw,640px)}
+.giro img{width:100%;height:auto}
 .pasos3{display:grid;gap:clamp(20px,2.1vw,34px)}
 .pasos3 li{display:flex;align-items:center;gap:20px;font-size:clamp(18px,1.5vw,29px);font-weight:600;letter-spacing:-.015em}
 .pasos3 b{flex:none;width:clamp(40px,3vw,58px);aspect-ratio:1;border-radius:50%;background:#fff;color:var(--azul-d);display:grid;place-items:center;font-size:clamp(17px,1.3vw,24px)}
